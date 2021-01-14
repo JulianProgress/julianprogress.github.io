@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /norobots/
+
+Sitemap: https://julianprogress.github.io/projectname/sitemap.xml
