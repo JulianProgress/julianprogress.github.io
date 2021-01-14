@@ -1,0 +1,1 @@
+mv _drafts/* _posts
