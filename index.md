@@ -1,9 +1,10 @@
 ---
-title: About Alembic
+title: About Me
 feature_text: |
-  ## Alembic
-  A Jekyll boilerplate theme designed to be a starting point for any Jekyll website
-feature_image: "https://picsum.photos/1300/400?image=989"
+  ## Julian
+  Welcome to the blog of julianprogress, an AI engineer, a data scientist, and a proactive learner.
+feature_image: https://fastly.picsum.photos/id/135/2560/1920.jpg?hmac=MAh0eBIqBNEgND6D2vgcIBIQ4BE1jzewN1QQWDfBBEY
+# "https://picsum.photos/1300/400?image=989"
 excerpt: "Alembic is a starting point for [Jekyll](https://jekyllrb.com/) projects. Rather than starting from scratch, this boilerplate is designed to get the ball rolling immediately. Install it, configure it, tweak it, push it."
 ---
 
