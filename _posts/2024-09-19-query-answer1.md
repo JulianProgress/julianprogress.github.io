@@ -9,7 +9,7 @@ feature_image: "https://picsum.photos/2560/600?image=872"
 ---
 
 ## 프로그래머스 Lv.3. 자동차 대여 기록에서 대여중 / 대여 가능 여부 구분하기
-문제링크: https://school.programmers.co.kr/learn/courses/30/lessons/157340
+[문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/157340)
 
 해당 문제는 자동차 대여 회사의 자동차 대여 기록 정보를 담은 'CAR_RENTAL_COMPANY_RENTAL_HISTORY' 테이블을 활용한다. 문제는 'CAR_RENTAL_COMPANY_RENTAL_HISTORY' 테이블에서 2022년 10월 16일에 대여 중인 자동차인 경우 '대여중' 으로 표시하고, 대여 중이지 않은 자동차의 경우 '대여 가능'을 표시하는 컬럼 (AVAILABILITY) 를 추가해서 자동차 ID 와 함께 제시하는 문제이다.  
 언뜻 생각해보면 쉽다고 느껴지지만, 사실 고려해야될 사항이 있다.
