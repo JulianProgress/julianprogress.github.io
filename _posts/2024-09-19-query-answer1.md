@@ -1,5 +1,5 @@
 ---
-title: (쿼리 테스트 준비) 대여 가능한 자동차는?
+title: [쿼리 테스트] 대여 가능한 자동차는?
 categories:
 - SQL
 - Query Test
