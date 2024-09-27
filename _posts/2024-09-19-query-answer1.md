@@ -1,12 +1,10 @@
 ---
-title: (쿼리 테스트) 대여 가능한 자동차는?
-categories:
-- SQL
-- Query Test
-- CASE
-- GROUP BY
-feature_image: "https://picsum.photos/2560/600?image=872"
+layout: post
+title:  (쿼리 테스트) 대여 가능한 자동차는?
+date:   2024-09-19
+description: SQL, Query Test, CASE, GROUP BY
 ---
+
 
 # 자동차 대여 기록에서 대여중 / 대여 가능 여부 구분하기
 [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/157340)

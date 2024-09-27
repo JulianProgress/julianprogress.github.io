@@ -1,12 +1,8 @@
 ---
+layout: post
 title: (쿼리테스트) 자동차 대여기록 별 대여 금액 구하기
-categories:
-- SQL
-- MySQL
-- Query Test
-- DATEDIFF
-- REGEXP_REPLACE
-feature_image: "https://picsum.photos/2560/600?image=872"
+date:   2024-09-25
+description: SQL, MySQL, Query Test, DATEDIFF, REGEXP_REPLACE
 ---
 
 # 자동차 대여 기록 별 대여 금액 구하기
