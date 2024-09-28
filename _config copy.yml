@@ -1,0 +1,39 @@
+title: Julian Progress
+description: A Blog Built for Archiving My Life
+
+url: https://julianprogress.github.io/
+# Only necessary when hosting your site in a sub-directory. Project sites hosted on GitHub Pages are the common use-case of this variable.
+baseurl: # Ex: /project-page
+paginate_path: "blog/page:num/"
+permalink: blog/:title/
+
+# Header Option
+# header: large
+
+sass:
+    style: compressed
+
+markdown: kramdown
+highlighter: rouge
+plugins: [jekyll-paginate]
+paginate: 5
+
+navigation:
+    - title: Home
+      url: /index.html
+    - title: About
+      url: /about
+    - title: Contact
+      url: /contact
+
+social:
+    github: brianmaierjr
+    twitter: brianmaierjr
+    facebook: brianmaierjr
+    email: julian8748@gmail.com
+    linkedin: junhyungkwon
+
+google_analytics: "UA-58263416-1"
+
+disqus:
+    shortname: brianmaierjr
