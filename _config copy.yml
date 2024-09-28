@@ -1,5 +1,5 @@
-title: Julian Progress
-description: A Blog Built for Archiving My Life
+title: Long Haul
+description: Long Form Jekyll theme built with SASS
 
 url: https://julianprogress.github.io/
 # Only necessary when hosting your site in a sub-directory. Project sites hosted on GitHub Pages are the common use-case of this variable.
@@ -27,11 +27,13 @@ navigation:
       url: /contact
 
 social:
-    github: JulianProgress
-    twitter: 
-    facebook: 
-    email: julian8748@gmail.com
-    linkedin: junhyungkwon
+    github: brianmaierjr
+    twitter: brianmaierjr
+    facebook: brianmaierjr
+    email: brimaidesigns@gmail.com
+    linkedin: brianmaierjr
+    youtube: RickAstleyYT
+    tumblr: i-am-a-fish
 
 google_analytics: "UA-58263416-1"
 
