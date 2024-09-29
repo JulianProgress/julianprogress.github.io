@@ -2,7 +2,8 @@
 layout: post
 title:  (쿼리 테스트) 대여 가능한 자동차는?
 date:   2024-09-19
-description: SQL, Query Test, CASE, GROUP BY
+tags: [SQL, Test]
+categories: DB
 ---
 
 

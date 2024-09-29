@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-{%- include head.html -%}
+  {%- include head.html -%}
 
-<body>
+  <body>
 
-   {%- include header.html -%}
+    {%- include views/header.html -%}
 
-   <div class="content">
-      <div class="container">
-         {{ content }}
+    {%- include views/banner.html -%}
+
+    {%- include extensions/hashlocate.html -%}
+
+    {%- include extensions/theme-toggle.html -%}
+
+    {%- include extensions/click-to-top.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
       </div>
-   </div><!-- end .content -->
+    </main>
 
-   {%- include footer.html -%}
-   {%- include scripts.html -%}
+    {%- include views/footer.html -%}
 
-</body>
-
+  </body>
 </html>
