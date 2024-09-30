@@ -1,8 +1,8 @@
 ---
 layout: post
-title: (MySQL) 쿼리문 심화 - 윈도우 함수 (2)
+title: "[SQL] 쿼리문 심화 - 윈도우 함수 (2)"
 date: 2024-09-29
-tags: [SQL 심화, MySQL, 데이터 분석]
+tags: [SQL 심화, PARTITION BY, GROUP BY, ORDER BY]
 categories: DataAnalysis
 ---
 
@@ -166,6 +166,9 @@ FROM RankedUsers r
 WHERE r.ranking <= 3
 ORDER BY r.day, r.ranking;
 ```
+- ```WITH``` 절: 랭킹을 계산하는 서브 쿼리를 명확하게 하고, 이를 사용해 메인 쿼리에서 ranking 비교를 진행한다.
+- ```WHERE r.ranking <= 3```: 일별로 랭킹 3위 이상인 유저만 선택하는 구문이다.
+
 **결과예시)**
 
 |u_id|day|ranking|
@@ -177,3 +180,38 @@ ORDER BY r.day, r.ranking;
 |105|2024-01-02|2|
 |106|2024-01-02|3|
 
+## 2. 날짜 별 다음날과 일 평균 사용자 접속 수 비교
+```Users``` 테이블을 사용해서 일 평균 사용자 접속 수가 이전날 일 평균 사용자 접속 수보다 많은 날짜와 평균 사용자 접속 수를 함께 쿼리하려고 한다. 이를 MySQL 쿼리로 작성해보면 아래와 같이 작성해볼 수 있다:
+```SQL
+WITH DailyAvgAccess AS (
+    SELECT
+        day,
+        AVG(access_cnt) AS avg_access
+    FROM Users
+    GROUP BY day
+)
+SELECT day, avg_access
+FROM (
+    SELECT
+        day,
+        avg_access,
+        LAG(avg_access, 1) OVER (ORDER BY day) AS prev_day_avg_access
+    FROM DailyAvgAccess
+) subquery
+WHERE avg_access > prev_day_avg_access;
+```
+- ```WITH DailyAvgAccess AS ()```: 일별로 일 평균 사용자 접속 수를 계산한다. ```GROUP BY``` 를 사용해 날짜별로 데이터를 그룹화하고 ```AVG``` 함수를 사용해 일평균 접속 수를 구한다.
+- ```LAG(avg_access, 1) OVER (ORDER BY day) AS prev_day_avg_access```: 이전 날의 평균 사용자 접속 수를 구한다.
+- ```WHERE avg_access > prev_day_avg_access```: 현재 날의 평균 접속 수가 이전 날 평균 접속 수보다 큰 경우를 필터링한다. 
+
+**결과예시)**
+
+|day|avg_access|
+|:---|:---|
+|2024-01-02|120|
+|2024-01-04|150|
+
+---
+
+# 마무리하며
+지금까지 주로 사용되는 윈도우 함수의 종류와 각각의 사용 예시, 그리고 몇가지 추가적인 쿼리 예시도 함께 살펴보았다. 확실히 ```GROUP BY``` 를 사용하는 것과 느낌 차이가 있으며, 특히 ```WITH``` 절과 함께 사용할 때 쿼리가 깔끔해지고 머릿속으로 더 잘 정리가 되는 것 같다. 

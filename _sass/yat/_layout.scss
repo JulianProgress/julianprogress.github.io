@@ -297,7 +297,7 @@ html {
   .post-meta {
     color: $grey-color;
     font-size: $base-font-size;
-    margin-bottom: $spacing-unit * 0.5;
+    margin-bottom: $spacing-unit * 0.3;
   }
 
   .post-excerpt {
@@ -431,7 +431,13 @@ html {
 
     .post-meta {
       color: $grey-color;
-      padding-bottom: 15px;
+      padding-bottom: 10px;
+    }
+    
+    .post-hits {
+      // color: $grey-color;
+      // font-size: $base-font-size;
+      margin-bottom: 10px;
     }
   }
 

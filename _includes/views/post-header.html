@@ -18,6 +18,12 @@
     {% assign reading_time = return %}
     <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> {{ reading_time }}</span>
   </div>
+  <div class="post-hits">
+    <a href="https://hits.seeyoufarm.com/{{site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url }}" target="_blank">
+      <img 
+      src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url }}&count_bg=%235A5A5A&title_bg=%235A5A5A&icon=cliqz.svg&icon_color=%23D2DEE7&title=Visitors&edge_flat=true"/>
+    </a>
+  </div>
 
   {%- if page.tags.size > 0 -%}
   <div class="post-tags">

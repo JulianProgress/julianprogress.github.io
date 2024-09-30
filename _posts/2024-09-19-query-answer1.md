@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  (쿼리 테스트) 대여 가능한 자동차는?
+title:  "[쿼리 테스트] 대여 가능한 자동차는?"
 date:   2024-09-19
 tags: [SQL, Test]
 categories: DB
