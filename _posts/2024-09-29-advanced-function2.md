@@ -81,6 +81,7 @@ ORDER BY category, dense_sales_rank;
 - ```PARTITION BY category``` 로 카테고리 별로 데이터를 나누고, 매출 금액에 따라 연속된 순위를 부여한다.
 
 **결과 예시)**
+
 |category|product_id|sales_amount|sales_rank|
 |:---|:---|:---|:---|
 |A|101|2000|1|
@@ -135,6 +136,7 @@ ORDER BY product_id, sales_date;
 ```LAG(sales_amount, 1)``` 함수는 현재 행의 이전 행에 있는 매출 값을 가져온다.
 
 **결과예시)** 
+
 |product_id|sales_date|sales_amount|next_day_sales|sales_difference|
 |:---|:---|:---|:---|:---|
 |101|2024-01-01|1000|NULL|NULL|
